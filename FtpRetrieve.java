@@ -40,7 +40,8 @@ public class FtpRetrieve {
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
             
             String remoteFile = "/test/testFile.txt";
-            File downloadFile = new File("C:/testFile.txt");
+            File downloadFile = new File("D:/testFile.txt");
+            //new FileOutputStream("C:/testFile.txt", false).close();
             OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(downloadFile));
             boolean victory = ftpClient.retrieveFile(remoteFile, outputStream);
             ftpSuccess = victory;
