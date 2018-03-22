@@ -39,7 +39,7 @@ public class FtpRetrieve {
             ftpClient.enterLocalPassiveMode();
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
             
-            String remoteFile = "/test/testFile.txt";
+            String remoteFile = "/testFile.txt";
             File downloadFile = new File("D:/testFile.txt");
             //new FileOutputStream("C:/testFile.txt", false).close();
             OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(downloadFile));
