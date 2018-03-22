@@ -54,6 +54,10 @@ public class FtpProject extends Application {
         pane.add(goButton, 4, 0, 1, 1);
         
         goButton.setOnAction(e -> {
+            ftp.setServerName(servTxtField.getText());
+            ftp.setPortNum(Integer.parseInt(portTxtField.getText()));
+            ftp.setUserName(userTxtField.getText());
+            ftp.setPassWord(passTxtField.getText());
             ftp.getFile();
             boolean success = ftp.getSuccess();
         });
